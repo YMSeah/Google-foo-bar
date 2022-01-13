@@ -7,7 +7,7 @@ original grid. That way, I can simply traverse into another grid instead
 of dealing with rounding square-root/divisional errors associated with
 reflections at non-integral coordinates.
 
-In fact, I only need to take note of the coordinates of me Commander Lambdas
+In fact, I only need to take note of the coordinates of me and Commander Lambdas
 elite bunny trainer (the enemy) for each grid. Then, I calculate the distance
 and line associated with each match between me and myself or the enemy that
 do not exceed the maximum distance. Each line is stored as a tuple (dx//g, dy//g)
