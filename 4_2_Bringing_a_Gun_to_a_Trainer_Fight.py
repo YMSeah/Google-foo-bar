@@ -9,17 +9,17 @@ reflections at non-integral coordinates.
 
 In fact, I only need to take note of the coordinates of me and Commander Lambdas
 elite bunny trainer (the enemy) for each grid. Then, I calculate the distance
-and line associated with each match between me and myself or the enemy that
-do not exceed the maximum distance. Each line is stored as a tuple (dx//g, dy//g)
-where g = gcd(dx, dy) instead of gradient (dx/dy) to avoid rounding errors and
-division by 0. For each line, find the person nearest to me that lines on the
-line.
+and line associated with each match between my original position and myself or
+the enemy that do not exceed the maximum distance. Each line is stored as a 
+tuple (dx//g, dy//g) where g = gcd(dx, dy) instead of gradient (dx/dy) to avoid 
+rounding errors and division by 0. For each line, find the person nearest to my
+original position that lies on the line.
 
 Note that lines are directed. i.e. (1, 0) != (-1, 0). Former goes left, latter
 goes right.
 
 There is a maximum of (2 points * (10000 dist / 2 min dist betw 2 pts on
-different grids)^2 * 4 directions) = O(200 million)"""
+different grids)^2 * 4 directions) points = O(200 million)"""
 
 # from math import gcd # gcd not available on foobar -.-
 def gcd(x, y):
